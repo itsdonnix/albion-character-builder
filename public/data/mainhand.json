@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Beginner's Sword",
+    "type": "sword",
+    "tier": 1,
+    "asset_name": "T1_MAIN_SWORD"
+  },
+  {
+    "name": "Novice's Sword",
+    "type": "sword",
+    "tier": 2,
+    "asset_name": "T2_MAIN_SWORD"
+  },
+  {
+    "name": "Novice's Bow",
+    "type": "bow",
+    "tier": 2,
+    "asset_name": "T2_2H_BOW"
+  }
+]

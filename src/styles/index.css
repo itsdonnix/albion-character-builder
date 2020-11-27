@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #d3d3d3;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+input[type="checkbox"]::before {
+  border: 7px solid #785aff;
+  content: "";
+  width: inherit;
+  height: inherit;
+  display: block;
+  border-radius: inherit;
+  background-color: #fff;
+  transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.gear-editor {
+  max-width: 510px;
+  /* min-width: 510px; */
+  max-height: 552.484px;
+  /* min-height: 552.484px; */
+  /* background-color: bisque; */
+}
+
+.gear-editor .item {
+  overflow: visible;
+}
+
+.gear-editor .item.cursor {
+  cursor: pointer;
+}
+
+.gear-editor .item:empty:hover:after {
+  content: "+";
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.7);
+  top: 40%;
+  left: 0;
+  width: 100%;
+  line-height: 19px;
+  height: 100%;
+  position: absolute;
+}
+
+.item-list__body .item {
+  overflow: hidden;
+  text-align: center;
+}
+
+.item-list__body--gear {
+  position: relative;
+  padding: 0 0 108.333%;
+  background: url(/img/gear3.png);
+  background-size: cover;
+}
+
+.item-list__body--gear .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 25%;
+  height: auto;
+  min-height: 22%;
+}
+
+.item-list__body--gear .item img {
+  display: block;
+}
+
+.item-list__body--gear .item--head {
+  top: 15.5%;
+  left: 37.6%;
+}
+
+.item-list__body--gear .item--armor {
+  top: 37.1%;
+  left: 37.9%;
+}
+
+.item-list__body--gear .item--mainhand {
+  top: 37%;
+  left: 11%;
+}
+
+.item-list__body--gear .item--offhand {
+  top: 37%;
+  left: auto;
+  right: 10.3%;
+}
+
+.item-list__body--gear .item--bag {
+  top: 13.3%;
+  left: 5.6%;
+}
+
+.item-list__body--gear .item--cape {
+  top: 13.3%;
+  left: auto;
+  right: 5.2%;
+}
+
+.item-list__body--gear .item--food {
+  top: 61.4%;
+  left: 5.6%;
+}
+
+.item-list__body--gear .item--potion {
+  top: 61.4%;
+  left: auto;
+  right: 5.2%;
+}
+
+.item-list__body--gear .item--shoes {
+  top: 58.9%;
+  left: 37.9%;
+}
+
+.item-list__body--gear .item--mount {
+  top: 73%;
+  left: 37%;
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.stats-lists li {
+  padding: 2px 10px 2px 10px;
+}
+
+.stats-lists li:nth-child(2n + 1) {
+  background-color: #eee5df;
+}
+
+.animate--fade-in {
+  animation: fade-in 0.3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.animate--fade-out {
+  animation: fade-in 0.3s reverse;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
